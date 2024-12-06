@@ -6,8 +6,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: node:20
-    timeout-minutes: 1000000
     steps:
       - name: Action Checkout
         uses: actions/checkout@v3
