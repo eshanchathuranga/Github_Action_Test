@@ -1,12 +1,16 @@
-//console.log("This is the Github Action Test Project")
-
-
-function sleep (time) {
+// sleep time expects milliseconds
+function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-
-while (true) {
-    console.log("This is the infinity loop")
-    sleep(1500)
-}
+let i = 0;
+(async function() {
+    while (true) {
+        console.log("This is the infinity loop");
+        await sleep(1000);
+        i++;
+        if (i === 100) {
+            break;
+        }
+    }
+})();
