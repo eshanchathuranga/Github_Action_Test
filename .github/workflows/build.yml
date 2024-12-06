@@ -10,8 +10,8 @@ jobs:
       - name: Action Checkout
         uses: actions/checkout@v3
       - name: Build 
-        run: npm install -g nodemon
+        run: npm install -g pm2
       - name: Run
-        run: nodemon index.js
+        run: pm2 start index.js
       
   
